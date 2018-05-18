@@ -49,7 +49,6 @@ unsigned int rotations = 0; // .18 deg rotations per function call, 4000 = 360 d
 unsigned char rotating = 0;
 unsigned char rotated = 0;
 unsigned char sensor = 0;
-unsigned char previousDirection = 0;
 unsigned char initialReset = 0;
 
 
@@ -100,7 +99,7 @@ int main(void){
 					Stepper_CCW(0);
 					StepperR_CW();
 					rotations += 1;
-					if(rotations >= 1000){rotated = 1; rotating = 0; direction = 1; rotations = 0;}
+					if(rotations >= 1100){rotated = 1; rotating = 0; direction = 1; rotations = 0;}
 					break;
 			}
 			
